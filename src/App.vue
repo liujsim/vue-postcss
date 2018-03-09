@@ -3,17 +3,39 @@
     <div aspectratio w-16-9>
         <div aspectratio-content></div>
     </div>
+    <p :class="$style.red">
+      This should be red
+    </p>
+     <p :class="{ [$style.red]: isRed }">
+      Am I red?
+    </p>
+    <p :class="[$style.red, $style.bold]">
+      Red and bold
+    </p>
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  created () {
+    console.log(this.$style.red)
+    // -> "_1VyoJ-uZOjlOxP7jWUy19_0"
+    // an identifier generated based on filename and className.
+  },
+  data () {
+    return {
+      isRed: '233'
+    }
+  },
+  methods: {
+
+  }
 }
 </script>
 
-<style lang="postcss">
+<style lang="postcss" module>
 :root {
   --color-main:#7498FB;
   --bg: #fff;
@@ -57,4 +79,14 @@ export default {
 [w-16-9] {
   aspect-ratio:'3:1'; /* 只能单独写 */
 }
+
+/* css module */
+
+.red {
+  color: red;
+}
+.bold {
+  font-weight: bold;
+}
+
 </style>
