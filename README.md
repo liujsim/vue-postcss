@@ -28,3 +28,14 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## postCSS
+
+➜  ~ vue --version
+2.9.3
+
+vue-cli 项目已经默认集成了 postCSS, package.json 中导入 `postcss-import` `postcss-loader` `postcss-url`
+
+`autoprefixer`
+
+查询 `usePostCSS:true` ，配置文件中已经启用
