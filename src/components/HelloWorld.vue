@@ -95,10 +95,28 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="postcss" scoped>
+:root {
+  --color-main:#7498FB;
+  --bg: #fff;
+  --bg-enter: #ccc;
+}
+@custom-selector :--button button, .button;
+@custom-selector :--enter :hover, :focus;
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+:--heading {
+ font-weight: bold !important;
+}
 .hello {
   display: flex;
   flex-direction: column;
+  background-color: var(--color-main);
+}
+:--button {
+  background-color: var(--bg);
+}
+:--button:--enter {
+  background-color: var(--bg-enter);
 }
 h1, h2 {
   font-weight: normal;

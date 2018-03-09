@@ -5,6 +5,6 @@ module.exports = {
     "postcss-import": {},
     "postcss-url": {},
     // to edit target browsers: use "browserslist" field in package.json
-    "autoprefixer": { browsers: ['last 2 versions', 'Android >= 4.4'] }
+    // "autoprefixer": { browsers: ['last 2 versions', 'Android >= 4.4'] },
   }
 }
