@@ -1,6 +1,6 @@
 # vue-postcss
 
-> A Vue.js project
+> 基于 vue-cli 的项目，添加 postCSS 常用插件
 
 ## Build Setup
 
@@ -38,6 +38,14 @@ vue-cli 项目已经默认集成了 postCSS, package.json 中导入 `postcss-imp
 
 在 .vue 文件中 style 标签指定使用 postcss（推荐），这样 stylelint 等规则校验工具会开启 postCSS 语法支持
 
+参考
+
+[ 官方 PostCSS 插件列表 推荐](https://github.com/postcss/postcss/blob/master/README.cn.md)
+
+[翻译计划-从sass到PostCSS](https://xdlrt.github.io/2017/01/25/2017-01-25/)
+
+查询 `usePostCSS:true` ，配置文件中已经启用
+
 插件
 
 ###`autoprefixer`
@@ -62,6 +70,38 @@ js是定义一个变量，它是引用。他需要借助一个:root选择器
 You are using @apply rule and custom property sets.
 This feature won't be included in the next major release of postcss-cssnext
 
+#### 嵌套
+
+和 sass 不同， CSS的嵌套语法包含一个前置于内层的&
+
+```
+#app {
+  & img {
+    height: 100px;
+  }
+  &:hover,
+  &:focus {...}
+  &::after {...}
+}
+```
+基本的嵌套需要前置的&.伪类和选择器在Sass和CSS中是相同的.媒体查询不需要前置&.
+
+### precss
+
+不推荐使用
+
+提供 sass-like 语法支持
+
+```
+npm install precss --save-dev
+```
+
+### postcss-px-to-viewport
+
+```
+npm install postcss-px-to-viewport --save-dev
+```
+
 ### postcss-bem 使用
 
 [PostCSS深入学习: 结合BEM和SUIT方法使用PostCSS](https://www.w3cplus.com/PostCSS/using-postcss-with-bem-and-suit-methodologies.html)
@@ -78,4 +118,21 @@ cssnano 主要用来压缩和清理 css 代码。
 npm i cssnano-preset-advanced --save-dev
 ```
 
-查询 `usePostCSS:true` ，配置文件中已经启用
+### PostCSS Aspect Ratio Mini
+
+处理容器的宽高比
+
+```
+npm i postcss-aspect-ratio-mini --save
+```
+
+### postcss-viewport-units
+
+```
+npm i postcss-viewport-units --save
+```
+
+[官网](https://github.com/yisibl/postcss-aspect-ratio-mini)
+
+
+

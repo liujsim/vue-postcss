@@ -45,41 +45,9 @@
         </a>
       </li>
     </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <div class="ignore">
+      ignore
+    </div>
   </div>
 </template>
 
@@ -97,7 +65,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="postcss" scoped>
 :root {
-  --color-main:#7498FB;
+  --color-main:#fff;
   --bg: #fff;
   --bg-enter: #ccc;
 }
@@ -131,5 +99,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.ignore {
+  color: aquamarine;
+  font-size: 40px;
 }
 </style>
