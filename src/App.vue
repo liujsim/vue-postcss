@@ -11,7 +11,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss">
+:root {
+  --color-main:#7498FB;
+  --bg: #fff;
+  --bg-enter: #ccc;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,5 +24,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  & img {
+    height: 100px;
+  }
 }
 </style>
